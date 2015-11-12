@@ -13,15 +13,15 @@ typedef void (^FailureResponse)(NSError * error);
 
 @interface NetworkManager : NSObject
 
-- (void)loginUserWithEmail:(NSString *)email password:(NSString *)password success:(SuccessResponse)success failure:(FailureResponse)failure;
+- (void)loginUserWithEmail:(NSString *)email password:(NSString *)password success:(SuccessResponse)success failure:(FailureResponse)failure __attribute__((deprecated("Use reactive implementation")));
 
-- (void)registerUserWithEmail:(NSString *)email password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName success:(SuccessResponse)success failure:(FailureResponse)failure;
+- (void)registerUserWithEmail:(NSString *)email password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName success:(SuccessResponse)success failure:(FailureResponse)failure __attribute__((deprecated("Use reactive implementation")));
 
-- (void)verifyEmail:(NSString *)email success:(SuccessResponse)success failure:(FailureResponse)failure;
+- (void)verifyEmail:(NSString *)email success:(SuccessResponse)success failure:(FailureResponse)failure __attribute__((deprecated("Use reactive implementation")));
 
-- (void)logoutUserWithSuccess:(SuccessResponse)success failure:(FailureResponse)failure;
+- (void)logoutUserWithSuccess:(SuccessResponse)success failure:(FailureResponse)failure __attribute__((deprecated("Use reactive implementation")));
 
-- (void)getUserInfoWithSuccess:(SuccessResponse)success failure:(FailureResponse)failure;
+- (void)getUserInfoWithSuccess:(SuccessResponse)success failure:(FailureResponse)failure __attribute__((deprecated("Use reactive implementation")));
 
 @end
 
